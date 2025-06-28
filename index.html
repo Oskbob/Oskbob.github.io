@@ -1,20 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-    <style>
-      body {
-        background: white;
-        font-family: sans-serif;
-        text-align: center;
-        margin-top: 100px;
-      }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Newsletter</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: white;
+      text-align: center;
+    }
+
+    header {
+      background-color: #e0e0e0; /* Light grey */
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+      padding-left: 20px;
+    }
+
+    nav {
+      padding-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      background: white;
+      border: 1px solid #aaa;
+      padding: 8px 12px;
+      margin-left: 10px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+
+    nav a:hover {
+      background: #ddd;
+    }
+
+    main {
+      padding: 60px 20px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is my first GitHub Pages site.</p>
+
+  <header>
+    <h1>My Newsletter</h1>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="archive.html">Archives</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Hello, World!</h2>
+    <p>This is my first GitHub Pages newsletter landing page.</p>
+  </main>
+
 </body>
 </html>

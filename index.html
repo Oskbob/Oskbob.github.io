@@ -9,11 +9,10 @@
       margin: 0;
       font-family: sans-serif;
       background: white;
-      text-align: center;
     }
 
     header {
-      background-color: #e0e0e0; /* Light grey */
+      background-color: #e0e0e0;
       padding: 20px;
       display: flex;
       justify-content: space-between;
@@ -45,8 +44,53 @@
       background: #ddd;
     }
 
-    main {
-      padding: 60px 20px;
+    .container {
+      display: flex;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 40px;
+    }
+
+    .main {
+      flex: 3;
+      line-height: 1.6;
+    }
+
+    .main h2 {
+      margin-top: 0;
+    }
+
+    .main p {
+      margin-bottom: 1em;
+    }
+
+    .sidebar {
+      flex: 1;
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -60,10 +104,35 @@
     </nav>
   </header>
 
-  <main>
-    <h2>Hello, World!</h2>
-    <p>This is my first GitHub Pages newsletter landing page.</p>
-  </main>
+  <div class="container">
+    <div class="main">
+      <h2>Letter Title – June 28, 2025</h2>
+      <p>Dear reader,</p>
+
+      <p>This is the first paragraph of your newsletter. Break long thoughts into short, readable chunks. Think of every 2–4 sentences as a good place for a paragraph break.</p>
+
+      <p>You can use <strong>bold</strong> or <em>italic</em> for emphasis. You can even add links if needed. Just don’t drop a wall of text.</p>
+
+      <p>Here’s a new idea in a new paragraph.</p>
+
+      <p>Thanks for reading,<br>— Me</p>
+    </div>
+
+    <div class="sidebar">
+      <h3>Recent Letters</h3>
+      <ul>
+        <li><a href="letters/2025-06-28.html">Why Ice Cream Cures Existential Dread</a></li>
+        <li><a href="letters/2025-06-01.html">Newsletter Launch</a></li>
+        <!-- Add more as needed -->
+      </ul>
+
+      <h3>Top Liked</h3>
+      <ul>
+        <li><a href="letters/2025-04-14.html">My Letter Went Viral</a></li>
+        <!-- Optional, just pick a few -->
+      </ul>
+    </div>
+  </div>
 
 </body>
 </html>

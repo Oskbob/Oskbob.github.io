@@ -9,7 +9,6 @@
       margin: 0;
       font-family: sans-serif;
       background: white;
-      text-align: center;
     }
 
     header {
@@ -45,25 +44,54 @@
       background: #ddd;
     }
 
-    main {
-      padding: 60px 20px;
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .tab-button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      border: none;
+      background-color: #ccc;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .tab-button.active {
+      background-color: #888;
+      color: white;
+    }
+
+    .tab-content {
+      display: none;
+      max-width: 600px;
+      margin: 30px auto;
+      text-align: left;
+      padding: 0 20px;
+    }
+
+    .tab-content.active {
+      display: block;
     }
 
     ul {
       list-style: none;
-      padding: 0;
+      padding-left: 0;
     }
 
     li {
-      margin: 10px 0;
+      margin-bottom: 10px;
     }
 
-    a.archive-link {
+    a {
       text-decoration: none;
       color: #0077cc;
     }
 
-    a.archive-link:hover {
+    a:hover {
       text-decoration: underline;
     }
   </style>
@@ -78,14 +106,48 @@
     </nav>
   </header>
 
-  <main>
-    <h2>Archive</h2>
-    <p>Past letters will appear here:</p>
+  <div class="tabs">
+    <button class="tab-button active" onclick="showTab('business')">Business</button>
+    <button class="tab-button" onclick="showTab('health')">Health Science</button>
+    <button class="tab-button" onclick="showTab('observations')">What I See</button>
+  </div>
+
+  <div id="business" class="tab-content active">
+    <h2>Business Letters</h2>
     <ul>
-      <li><a class="archive-link" href="letters/2025-06-28.html">Letter – June 28, 2025</a></li>
-      <!-- Add more letters here -->
+      <li><a href="letters/2025-05-15.html">Building Trust in Freelance Teams</a></li>
+      <!-- Add more -->
     </ul>
-  </main>
+  </div>
+
+  <div id="health" class="tab-content">
+    <h2>Health Science Letters</h2>
+    <ul>
+      <li><a href="letters/2025-04-08.html">Understanding Your Gut Brain</a></li>
+      <!-- Add more -->
+    </ul>
+  </div>
+
+  <div id="observations" class="tab-content">
+    <h2>What I See</h2>
+    <ul>
+      <li><a href="letters/2025-03-01.html">Why That Park Bench Feels Like Home</a></li>
+      <!-- Add more -->
+    </ul>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+      });
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
